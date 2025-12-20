@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { Menu } from "lucide-react";
 const navLinks = [
   {
     id: 1,
@@ -32,17 +33,25 @@ const navLinks = [
   },
 ];
 
-
 const NavbarCustom = () => {
-    return (
-      <nav>
-        <ul className='flex'>
-          {
-            navLinks.map(route => <li key={route.id} className='mr-10'><a href={route.path}>{route.name}</a></li>)
-          }
+  return (
+    <nav>
+      <div className="flex justify-between items-center p-4">
+        <span className="flex gap-4">
+          <Menu className="md:hidden"></Menu>
+          <h1>Navbar</h1>
+        </span>
+        <ul className="flex">
+          {navLinks.map((route) => (
+            <li key={route.id} className="mr-10">
+              <a href={route.path}>{route.name}</a>
+            </li>
+          ))}
         </ul>
-      </nav>
-    );
+        <h1>Login</h1>
+      </div>
+    </nav>
+  );
 };
 
 export default NavbarCustom;
