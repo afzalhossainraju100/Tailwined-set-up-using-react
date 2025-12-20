@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Menu } from "lucide-react";
+import { X } from "lucide-react";
 const navLinks = [
   {
     id: 1,
@@ -34,20 +35,25 @@ const navLinks = [
 ];
 
 const NavbarCustom = () => {
+  const [open, setOpen] = useState(false);
+  const links = navLinks.map((route) => (
+    <li key={route.id} className="mr-10">
+      <a href={route.path}>{route.name}</a>
+    </li>
+  ));
   return (
     <nav>
       <div className="flex justify-between items-center p-4">
-        <span className="flex gap-4">
-          <Menu className="md:hidden"></Menu>
+        <span className="flex gap-4" onClick={() => setOpen(!open)}>
+          {open ? (
+            <X className="md:hidden"></X>
+          ) : (
+            <Menu className="md:hidden"></Menu>
+          )}
+          <ul className="md:hidden">{links}</ul>
           <h1>Navbar</h1>
         </span>
-        <ul className="flex">
-          {navLinks.map((route) => (
-            <li key={route.id} className="mr-10">
-              <a href={route.path}>{route.name}</a>
-            </li>
-          ))}
-        </ul>
+        <ul className="md:flex hidden">{links}</ul>
         <h1>Login</h1>
       </div>
     </nav>
