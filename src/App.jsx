@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import Navbar from './component/navbar/Navbar.jsx'
 import NavbarCustom from './component/navbar/NavbarCustom.jsx'
-
+import ResultsChart from './component/ResurtsChart/ResultsChart.jsx'
 import PriceingOprion from './component/prisingoption/PriceingOprion.jsx'
 import { Suspense } from 'react'
 
@@ -24,6 +24,8 @@ function App() {
         >
           <PriceingOprion pricingPromise={pricingPromise}></PriceingOprion>
         </Suspense>
+
+        <ResultsChart></ResultsChart>
       </main>
     </>
   );
