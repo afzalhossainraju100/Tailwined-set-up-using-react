@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "name": "Basic",
+    "price": 1500,
+    "currency": "BDT",
+    "duration": "Monthly",
+    "bestFor": "Beginners and casual gym users",
+    "features": [
+      "Access to gym equipment",
+      "Cardio zone access",
+      "Free weight area",
+      "Locker facility",
+      "5 days per week access"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Standard",
+    "price": 2500,
+    "currency": "BDT",
+    "duration": "Monthly",
+    "popular": true,
+    "bestFor": "Regular fitness enthusiasts",
+    "features": [
+      "Full gym access (7 days/week)",
+      "Cardio and strength training",
+      "Free weight and machine access",
+      "Locker and shower facilities",
+      "2 group classes per week",
+      "Monthly body progress check"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Premium",
+    "price": 4000,
+    "currency": "BDT",
+    "duration": "Monthly",
+    "bestFor": "Advanced training and body transformation",
+    "features": [
+      "Unlimited gym access",
+      "Personal trainer (8 sessions per month)",
+      "Custom workout plan",
+      "Diet and nutrition guidance",
+      "All group classes included",
+      "Steam bath and sauna access",
+      "Priority coaching support"
+    ]
+  }
+]
