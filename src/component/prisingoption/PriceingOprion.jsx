@@ -19,7 +19,7 @@ const PriceingOprion = ({ pricingPromise }) => {
         </div>
 
         {/* Pricing Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 auto-rows-max">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch max-w-6xl mx-auto">
           {pricingData.map((priceing) => (
             <PricingCard key={priceing.id} priceing={priceing}></PricingCard>
           ))}

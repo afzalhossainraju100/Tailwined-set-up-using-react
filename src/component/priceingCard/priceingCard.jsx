@@ -20,35 +20,35 @@ const priceingCard = ({ priceing }) => {
         </div>
       )}
 
-      <div className="p-4 sm:p-6 md:p-8 pt-6 sm:pt-10 flex flex-col flex-grow">
+      <div className="p-5 sm:p-6 md:p-7 pt-8 sm:pt-10 flex flex-col flex-grow">
         {/* Plan Name */}
-        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2 sm:mb-3">
+        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2">
           {priceing.name}
         </h3>
 
         {/* Best For */}
-        <p className="text-xs sm:text-sm md:text-base text-gray-300 mb-4 sm:mb-6 min-h-8 sm:min-h-10">
+        <p className="text-sm md:text-base text-gray-300 mb-4 sm:mb-5 min-h-[2.5rem]">
           {priceing.bestFor}
         </p>
 
         {/* Price Section */}
-        <div className="mb-6 sm:mb-8 pb-6 sm:pb-8 border-b border-gray-400 border-opacity-30">
-          <div className="flex items-baseline mb-1 sm:mb-2">
-            <span className="text-4xl sm:text-5xl md:text-6xl font-bold text-white">
+        <div className="mb-5 sm:mb-6 pb-5 sm:pb-6 border-b border-gray-400 border-opacity-30">
+          <div className="flex items-baseline mb-1">
+            <span className="text-4xl sm:text-5xl md:text-5xl font-bold text-white">
               {priceing.price}
             </span>
-            <span className="text-sm sm:text-lg md:text-xl text-gray-300 ml-2">
+            <span className="text-base sm:text-lg text-gray-300 ml-2">
               {priceing.currency}
             </span>
           </div>
-          <p className="text-xs sm:text-sm text-gray-300">
+          <p className="text-sm text-gray-300">
             per {priceing.duration.toLowerCase()}
           </p>
         </div>
 
         {/* CTA Button */}
         <button
-          className={`w-full py-2 sm:py-3 md:py-4 rounded-lg font-bold text-sm sm:text-base md:text-lg transition-all duration-300 mb-6 sm:mb-8 ${
+          className={`w-full py-3 sm:py-3.5 rounded-lg font-bold text-sm sm:text-base transition-all duration-300 mb-5 sm:mb-6 ${
             priceing.popular
               ? "bg-white text-blue-600 hover:bg-gray-100 hover:scale-105 active:scale-95"
               : "bg-blue-500 text-white hover:bg-blue-600 hover:scale-105 active:scale-95"
@@ -58,15 +58,15 @@ const priceingCard = ({ priceing }) => {
         </button>
 
         {/* Features List */}
-        <div className="space-y-3 sm:space-y-4 flex-grow">
-          <p className="text-xs uppercase font-semibold text-gray-300 tracking-wider">
+        <div className="space-y-2.5 sm:space-y-3 flex-grow">
+          <p className="text-xs uppercase font-semibold text-gray-300 tracking-wider mb-1">
             What's Included:
           </p>
-          <ul className="space-y-2 sm:space-y-3">
+          <ul className="space-y-2">
             {priceing.features.map((feature, index) => (
               <li
                 key={index}
-                className="flex items-start text-xs sm:text-sm md:text-base text-gray-100 group"
+                className="flex items-start text-sm md:text-base text-gray-100 group"
               >
                 <Check className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 mt-0.5 text-green-400 flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <span>{feature}</span>
@@ -76,7 +76,7 @@ const priceingCard = ({ priceing }) => {
         </div>
 
         {/* Footer Note */}
-        <p className="text-xs text-gray-400 mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-400 border-opacity-30">
+        <p className="text-xs text-gray-400 mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-gray-400 border-opacity-30">
           No credit card required. Cancel anytime.
         </p>
       </div>
